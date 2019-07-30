@@ -16,7 +16,6 @@ const PlayerList = () => {
                 {...player}
                 key={player.id.toString()} 
                 index={index}
-                removePlayer={context.handleRemovePlayer}           
               />
             )}
         </React.Fragment>
@@ -29,6 +28,8 @@ const PlayerList = () => {
   );
 }
 
-
+PlayerList.propTypes ={
+  removePlayer: PropTypes.func.isRequired
+}
 
 export default PlayerList;

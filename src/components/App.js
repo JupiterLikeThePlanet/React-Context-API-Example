@@ -68,7 +68,8 @@ class App extends Component {
           {
             players: this.state.players, 
             actions: {
-              changeScore: this.handleScoreChange
+              changeScore: this.handleScoreChange,
+              removePlayer: this.handleRemovePlayer
             }
           }
         }>
@@ -78,6 +79,7 @@ class App extends Component {
           <PlayerList/>
           
           <AddPlayerForm addPlayer={this.handleAddPlayer} />
+          
         </div>
       </Provider>
     );

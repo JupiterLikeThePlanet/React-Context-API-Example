@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import {Consumer} from './Context';
 import PropTypes from 'prop-types';
 import Counter from './Counter';
 
@@ -18,16 +19,21 @@ class Player extends PureComponent {
       name,
       id,
       score,
-      index,
-      removePlayer,
+      index
     } = this.props;
 
     return (
       <div className="player">
-        <span className="player-name">
-          <button className="remove-player" onClick={() => removePlayer(id)}>✖</button>
-          { name }
-        </span>
+        <Consumer>
+          {context => (
+            <span className="player-name">
+                <button className="remove-player" onClick={() => context.actions.removePlayer(id)}>✖</button>
+                { name }
+            </span>
+          )}
+
+        </Consumer>
+
   
         <Counter 
           score={score}
