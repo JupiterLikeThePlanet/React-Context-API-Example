@@ -1,6 +1,6 @@
 import React from 'react';
 import {Consumer} from './Context';
-import PropTypes from 'prop-types';
+
 
 const AddPlayerForm = () => {
 
