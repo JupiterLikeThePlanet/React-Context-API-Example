@@ -16,7 +16,6 @@ const PlayerList = () => {
                 {...player}
                 key={player.id.toString()} 
                 index={index}
-                changeScore={context.actions.handleScoreChange}
                 removePlayer={context.handleRemovePlayer}           
               />
             )}
