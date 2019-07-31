@@ -6,12 +6,12 @@ import {Consumer} from "./Context"
 const PlayerList = () => {
   return (
     <Consumer>
-      {context =>{
+      { ({players}) => {
 
         return(
 
           <React.Fragment>
-            {context.players.map( (player, index) =>
+            {players.map( (player, index) =>
               <Player 
                 {...player}
                 key={player.id.toString()} 
