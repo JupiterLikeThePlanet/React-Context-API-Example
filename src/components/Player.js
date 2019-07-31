@@ -31,7 +31,6 @@ class Player extends PureComponent {
                 { name }
             </span>
           )}
-
         </Consumer>
 
   
