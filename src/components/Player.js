@@ -18,24 +18,22 @@ class Player extends PureComponent {
     const { 
       name,
       id,
-      score,
       index
     } = this.props;
 
     return (
       <div className="player">
         <Consumer>
-          { ({actions}) => (
+          { ({actions, players}) => (
             <span className="player-name">
                 <button className="remove-player" onClick={() => actions.removePlayer(id)}>✖</button>
-                { name }
+                { players[index].name }
             </span>
           )}
         </Consumer>
 
   
         <Counter 
-          score={score}
           index={index}
         />
       </div>

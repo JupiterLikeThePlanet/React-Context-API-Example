@@ -18,8 +18,7 @@ const Counter = ({ index }) => {
 }
 
 Counter.propTypes = {
-  index: PropTypes.number,
-  score: PropTypes.number,
+  index: PropTypes.number
 };
 
 export default Counter;
